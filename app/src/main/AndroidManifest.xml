@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/education"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/education"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Students_System"
+        tools:targetApi="35">
+
+        <!-- CHỈ LoginActivity là LAUNCHER -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Students_System.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- RegisterActivity - KHÔNG CÓ intent-filter LAUNCHER -->
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:label="Đăng Ký"
+            android:parentActivityName=".activities.LoginActivity"
+            android:theme="@style/Theme.Students_System.NoActionBar"
+            android:exported="false"/> <!-- Nên đặt exported="false" nếu không cần gọi từ app khác -->
+
+        <!-- MainActivity - KHÔNG CÓ intent-filter LAUNCHER -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Students_System.NoActionBar"
+            android:exported="false"/> <!-- Nên đặt exported="false" -->
+
+        <!-- AddEditStudentActivity - KHÔNG CÓ intent-filter LAUNCHER -->
+        <activity
+            android:name=".activities.AddEditStudentActivity"
+            android:label="Thêm/Sửa Học Sinh"
+            android:parentActivityName=".activities.MainActivity"
+            android:exported="false"/> <!-- Nên đặt exported="false" -->
+
+        <!-- Provider nếu cần -->
+        <!-- ... -->
+
+    </application>
+
+</manifest>

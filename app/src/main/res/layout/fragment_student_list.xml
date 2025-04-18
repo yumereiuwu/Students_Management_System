@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.StudentListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Thanh chứa Filter và Search -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="?attr/colorSurfaceContainerHighest"> <!-- Màu nền phân biệt -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+
+                <Spinner
+                    android:id="@+id/spinnerClassFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:spinnerMode="dropdown"/>
+
+
+
+                <ImageButton
+                    android:id="@+id/buttonSortOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sort"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Tùy chọn sắp xếp"/>
+
+            </LinearLayout>
+
+            <!-- Thanh tìm kiếm -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchViewStudent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:iconifiedByDefault="false"
+                app:queryHint="Tìm theo tên ..." />
+
+        </LinearLayout>
+
+
+        <!-- Điểm trung bình lớp (có thể ẩn/hiện tùy theo filter) -->
+        <TextView
+            android:id="@+id/textViewClassAverage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="?attr/colorSurfaceVariant"
+            android:textAppearance="?attr/textAppearanceTitleSmall"
+            android:textAlignment="center"
+            android:visibility="gone"
+            tools:text="Điểm trung bình lớp 10A1: 8.50"
+            tools:visibility="visible"/>
+
+        <!-- Danh sách học sinh -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewStudents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="80dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_student" />
+
+            <TextView
+                android:id="@+id/textViewEmptyList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Chưa có học sinh nào."
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Thêm học sinh"
+    app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

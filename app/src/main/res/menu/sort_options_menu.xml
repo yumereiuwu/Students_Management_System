@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sort_by_name_asc"
+        android:title="Sắp xếp theo Tên (A-Z)" />
+        <item
+            android:id="@+id/sort_by_avg_desc"
+        android:title="Sắp xếp theo Điểm TB (Cao-Thấp)" />
+        <item
+            android:id="@+id/sort_by_avg_asc"
+        android:title="Sắp xếp theo Điểm TB (Thấp-Cao)" />
+    </group>
+</menu>

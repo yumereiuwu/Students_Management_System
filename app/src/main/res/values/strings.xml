@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Students_System</string> <!-- Tên ứng dụng của bạn -->
+
+    <!-- CÁC STRING KHÁC MÀ BẠN CÓ THỂ ĐÃ ĐỊNH NGHĨA -->
+    <!-- ... -->
+    <string name="title_student_list">Danh Sách Học Sinh</string>
+    <!-- THÊM HAI STRING NÀY -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Trang chủ" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_profile"
+            android:title="Hồ sơ cá nhân" />
+        <item
+            android:id="@+id/nav_student_list"
+            android:icon="@drawable/ic_student_list"
+            android:title="Danh sách học sinh" />
+        <item
+            android:id="@+id/nav_ranking"
+            android:icon="@drawable/ic_ranking"
+            android:title="Bảng xếp hạng" />
+    </group>
+
+    <item android:title="Khác">
+        <menu>
+            <item
+                android:id="@+id/nav_message_dev"
+                android:icon="@drawable/ic_message"
+                android:title="Gửi tin nhắn cho nhà phát triển" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Đăng xuất" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/textViewItemRankNumber"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceTitleMedium"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="1" />
+
+    <ImageView
+        android:id="@+id/imageViewRankIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/textViewItemRankNumber"
+        app:layout_constraintBottom_toBottomOf="@id/textViewItemRankNumber"
+        app:layout_constraintStart_toStartOf="@id/textViewItemRankNumber"
+        app:layout_constraintEnd_toEndOf="@id/textViewItemRankNumber"
+        tools:src="@drawable/ic_rank_gold"
+        tools:visibility="visible"/>
+
+
+    <TextView
+        android:id="@+id/textViewItemRankName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        app:layout_constraintStart_toEndOf="@+id/textViewItemRankNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewItemRankAverage"
+        tools:text="Trần Thị B" />
+
+    <TextView
+        android:id="@+id/textViewItemRankAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="40dp"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="10.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State khi được check (hiện mật khẩu) -> hiện icon mắt mở -->
+    <item android:drawable="@drawable/ic_visibility" android:state_checked="true"/>
+    <!-- State mặc định (ẩn mật khẩu) -> hiện icon mắt đóng/gạch -->
+    <item android:drawable="@drawable/ic_visibility_off"/>
+</selector>

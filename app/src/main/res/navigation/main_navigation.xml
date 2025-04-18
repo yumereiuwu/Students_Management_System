@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.students_system.fragments.HomeFragment"
+        android:label="Trang Chủ"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.students_system.fragments.ProfileFragment"
+        android:label="Hồ Sơ Cá Nhân"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_student_list"
+        android:name="com.example.students_system.fragments.StudentListFragment"
+        android:label="Danh Sách Học Sinh"
+        tools:layout="@layout/fragment_student_list" />
+    <fragment
+        android:id="@+id/nav_ranking"
+        android:name="com.example.students_system.fragments.RankingFragment"
+        android:label="Bảng Xếp Hạng"
+        tools:layout="@layout/fragment_ranking" />
+
+    <!-- Bạn có thể định nghĩa các actions để điều hướng giữa các fragment nếu cần -->
+    <!-- Ví dụ:
+    <action
+        android:id="@+id/action_nav_home_to_nav_student_list"
+        app:destination="@id/nav_student_list" />
+     -->
+</navigation>

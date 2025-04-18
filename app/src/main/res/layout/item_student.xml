@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/textViewItemStudentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewItemStudentAverage"
+            android:layout_marginEnd="16dp"
+            tools:text="Nguyễn Văn A" />
+
+        <TextView
+            android:id="@+id/textViewItemStudentClassLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lớp:"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemStudentName"/>
+
+        <TextView
+            android:id="@+id/textViewItemStudentClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/textViewItemStudentClassLabel"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewItemStudentClassLabel"
+            tools:text="10A1"/>
+
+        <TextView
+            android:id="@+id/textViewItemStudentAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewItemStudentName"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewItemStudentName"
+            tools:text="9.50" />
+
+        <TextView
+            android:id="@+id/textViewItemStudentEmailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemStudentClassLabel"/>
+
+        <TextView
+            android:id="@+id/textViewItemStudentEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/textViewItemStudentEmailLabel"
+            app:layout_constraintTop_toTopOf="@+id/textViewItemStudentEmailLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewItemStudentEmailLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="nguyenvana@example.com" />
+
+
+        <TextView
+            android:id="@+id/textViewItemStudentScores"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemStudentEmailLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Toán: 9.0 - Văn: 8.5 - Anh: 10.0" />
+
+
+        <!-- *** SỬA PHẦN NÀY *** -->
+        <LinearLayout
+            android:id="@+id/linearLayoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemStudentScores">
+
+            <!-- Đặt các ImageButton BÊN TRONG LinearLayout -->
+            <ImageButton
+                android:id="@+id/buttonItemSendEmail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_send_email"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tooltipText="Gửi Email"
+                android:contentDescription="Gửi Email"/>
+
+            <ImageButton
+                android:id="@+id/buttonItemEditStudent"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_edit"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="16dp"
+            android:tooltipText="Sửa"
+            android:contentDescription="Sửa"/>
+
+            <ImageButton
+                android:id="@+id/buttonItemDeleteStudent"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="16dp"
+            android:tooltipText="Xóa"
+            android:contentDescription="Xóa"/>
+            <!-- *** KẾT THÚC SỬA PHẦN NÀY *** -->
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
